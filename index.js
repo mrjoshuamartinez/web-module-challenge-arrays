@@ -280,15 +280,11 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(arrayOne, arrayTwo, arrayThree, arrayFour){
-    let shuffleArrays = [arrayOne, arrayTwo, arrayThree, arrayFour];
-    let randomFlavorArray = [];
-    for (let i = 0; i < shuffleArrays.length; i++){
-        shuffleArrays.sort(() => Math.random());
-        randomFlavorArray.push(shuffleArrays[i]);
-    }
-    console.log(randomFlavorArray);
-}
-
-getRandomFlavors(originalFlavors, regionalFlavors, seasonalFlavors, newFlavors);
-g
+    function getRandomFlavors(arrayOne, arrayTwo, arrayThree, arrayFour){
+        for(i=0; i < arguments.length; i++){
+        let randomFlavorArray = arguments[i][Math.floor(Math.random()*arguments.length)];
+        console.log(randomFlavorArray);
+            }
+            
+        }
+        getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors);
